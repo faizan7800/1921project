@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>1921 Fund</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            /* background-image: url(images/ud-1.jpg); */
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 6%;
+        }
+
+        .main-heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: rgb(247, 248, 247);
+            text-shadow: 0 0 5px rgb(42, 235, 58), 0 0 10px rgb(34, 226, 8);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1 1 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            background: rgb(7, 7, 7);
+            border-radius: 8px;
+            box-shadow: 0 0px 20px rgba(253, 252, 252, 0.2), 0 5px 10px rgba(252, 251, 251, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: rgb(247, 248, 247);
+            text-shadow: 0 0 5px rgb(136, 243, 145), 0 0 10px rgb(34, 226, 8);
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #d8d8d8;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+        }
+
+        .offering {
+            margin-top: 15px;
+        }
+
+        .offering-title {
+            font-weight: bold;
+            color: rgb(247, 248, 247);
+            text-shadow: 0 0 5px rgb(42, 235, 58), 0 0 10px rgb(34, 226, 8);
+        }
+
+        .box-image {
+            width: 100%;
+            height: 170px;
+            margin: 0px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            object-position: 50% 32%;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .column {
+                flex: 1 1 100%;
+            }
+
+            /* Rearrange Order for Small Screens */
+            .box:nth-child(1) {
+                order: 1;
+                /* About Us */
+            }
+
+            .box:nth-child(3) {
+                order: 2;
+                /* Our Vision */
+            }
+
+            .box:nth-child(4) {
+                order: 3;
+                /* What We Offer */
+            }
+
+            .box:nth-child(2) {
+                order: 4;
+                /* Impact Goals */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/index.html"><img src="images/1921 logo.png" width="90px" alt="logo"></a>
+        <label for="toggler">
+            <i class="fa fa-bars"></i>
+        </label>
+        <input type="checkbox" id="toggler">
+        <div class="menu">
+            <ul class="list">
+                <li><a href="/1921-project.html"> About 1921</a></li>
+                <li><a href="/1921-BC.html"> 1921 BC</a></li>
+                <li><a href="/1921-fund.html"> The 1921 Fund</a></li>
+                <li><a href="/join-us.html">Join</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main-heading">The 1921 Fund</div>
+        <div class="content-wrapper">
+            <!-- Left Column -->
+            <div class="column">
+
+                <div class="box">
+                    <div class="img">
+                        <img src="images/imagesfor1921fundtab/envato-labs-ai-59443cda-c51b-49c7-8af7-e2771e9694e8.jpg"
+                            alt="impact goal" class="box-image">
+                    </div>
+                    <h3>About Us</h3>
+                    <p style="padding-bottom: 30px;">
+                        <span class="offering-title">Community Development Grants:</span><br> Funding for local
+                        infrastructure, health, and social well-being projects.
+                        <br>
+                    </p>
+                </div>
+
+                <div class="box">
+                    <img src="images/imagesfor1921fundtab/envato-labs-ai-015e6e05-9e64-472f-ac5d-3c850b95aa3d.jpg"
+                        alt="About Us" class="box-image">
+                    <h3>Impact Goals</h3>
+                    <p style="padding-bottom: 30px;">
+                        Launch and support <b>500+</b> businesses by <b>2030</b>, building a pipeline of sustainable
+                        enterprises that
+                        create jobs, drive economic growth, and address community needs.
+                        <br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column">
+                <div class="box">
+                    <img src="images/imagesfor1921fundtab/envato-labs-ai-d1efe6a8-9059-4d6f-9480-19d75d8d6861.jpg"
+                        alt="impact goal" class="box-image">
+                    <h3>Our Vision</h3>
+                    <p>
+                        Economic empowerment through innovative funding solutions for sustainable community development.
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="images/imagesfor1921fundtab//envato-labs-ai-62de2049-2643-4241-aa30-b61b57f89c6c.jpg"
+                        style="object-position: 50% 50%;" alt="impact goal" class="box-image">
+                    <h3>What We Offer</h3>
+                    <div class="offering">
+                        <span class="offering-title">Community Development Grants:</span> <br>
+                        Funding for local projects addressing infrastructure, health, and social well-being.
+                    </div>
+                    <div class="offering">
+                        <span class="offering-title">Educational Scholarships:</span> <br>
+                        Empowering future leaders in entrepreneurship, technology, and financial literacy.
+                    </div>
+                    <div class="offering">
+                        <span class="offering-title">Social Impact Investments:</span><br>
+                        Financial support for ventures addressing critical challenges like housing, workforce
+                        development, and sustainability.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
